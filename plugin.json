@@ -1,0 +1,71 @@
+{
+    "id": "audiourl",
+    "name": "Audio Url",
+    "description": "Mattermost web app plugin to have a native HTML5 audio player for audio urls",
+    "homepage_url": "https://github.com/Shadowsith/mattermost-plugin-audiourl",
+    "support_url": "https://github.com/Shadowsith/mattermost-plugin-audiourl/issues",
+    "release_notes_url": "https://github.com/Shadowsith/mattermost-plugin-audiourl/releases/tag/1.0.0",
+    "version": "1.0.0",
+    "min_server_version": "6.2.1",
+    "server": {
+        "executables": {
+            "linux-amd64": "server/plugin-linux-amd64",
+            "darwin-amd64": "server/plugin-darwin-amd64",
+            "windows-amd64": "server/plugin-windows-amd64.exe"
+        }
+    },
+    "webapp": {
+        "bundle_path": "client/main.js"
+    },
+    "settings_schema": {
+        "header": "Video Url settings",
+        "footer": "Please report problems with the plugin at: https://github.com/Shadowsith/mattermost-plugin-audiourl/issues",
+        "settings": [
+            {
+                "key": "width",
+                "display_name": "Audio player width",
+                "type": "number",
+                "help_text": "Set width audio player element in chat",
+                "default": "350"
+            },
+            {
+                "key": "blacklist",
+                "display_name": "Blacklist urls",
+                "type": "longtext",
+                "help_text": "Ignore urls or part of urls which are listed in the blacklist. Url parts must be comma separated.",
+                "default": ""
+            },
+            {
+                "key": "mp3",
+                "display_name": "Support MP3",
+                "type": "bool",
+                "help_text": "Support *.mp3 file urls",
+                "default": "true"
+            },
+            {
+                "key": "m4a",
+                "display_name": "Support M4A",
+                "type": "bool",
+                "help_text": "Support *.m4a file urls",
+                "default": "true"
+            },
+            {
+                "key": "ogg",
+                "display_name": "Support OGG",
+                "type": "bool",
+                "help_text": "Support *.ogg file urls",
+                "default": "true"
+            },
+            {
+                "key": "oga",
+                "display_name": "Support OGA",
+                "type": "bool",
+                "help_text": "Support *.oga file urls",
+                "default": "true"
+            }
+        ]
+    },
+    "props": {
+        "blacklist": ""
+    }
+}

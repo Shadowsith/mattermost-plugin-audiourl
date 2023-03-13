@@ -1,0 +1,4 @@
+/dist
+/node_modules
+/mattermost-audiourl-plugin
+*.tar.gz
